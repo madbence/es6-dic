@@ -121,6 +121,11 @@ c.register('c', ['Bar'], Bar => {
 c.resolve('c'); // 1, 2, 3 \o/ yay!
 ```
 
+### "Tests?!"
+
+Eeerrr, run them with browserify :S, not very node-friendy.
+If you have a better solution, please create an issue!
+
 ## License
 
 MIT
