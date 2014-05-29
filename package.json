@@ -1,0 +1,29 @@
+{
+  "name": "es6-dic",
+  "version": "0.0.1",
+  "description": "ES6 Dependency Injection Container",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/madbence/es6-dic"
+  },
+  "keywords": [
+    "dependency",
+    "injection",
+    "dic",
+    "ioc",
+    "di"
+  ],
+  "author": "Bence Dányi <madbence@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madbence/es6-dic/issues"
+  },
+  "homepage": "https://github.com/madbence/es6-dic",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  }
+}
