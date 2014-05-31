@@ -21,15 +21,10 @@ class Container {
       dependencies: dependencies,
       factory: factory
     };
-  }
-  init() {
-    var factories = Object.keys(this.factories);
-    factories.forEach(dep => {
-      var path;
-      if(path = depends(dep, dep, this.factories)) {
-        throw new Error(dep + ' depends on itself! (' + path.join('->') +')');
-      }
-    });
+    var path;
+    if(path = depends(name, name, this.factories)) {
+      throw new Error(name + ' depends on itself! (' + path.join('->') +')');
+    }
   }
   resolve(name) {
     if(!this.factories[name] && !this.parent) {

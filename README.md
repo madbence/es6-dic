@@ -18,8 +18,6 @@ var c = new Container();
 c.register('a', ['b'], b => b + 'a');
 c.register('b', () => 'b');
 
-c.init(); // do sanity-checks, like checking circular dependencies
-
 console.log(c.resolve('a')) // 'ba';
 ```
 
@@ -36,10 +34,6 @@ Dependency order **is** important.
 ### .resolve(name)
 
 Get instance for `name`.
-
-### .init()
-
-Do sanity-checks (checking for circular dependencies, etc).
 
 ## Notes
 
