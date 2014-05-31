@@ -8,7 +8,8 @@ function depends(a, b, list, path = []) {
 }
 
 class Container {
-  constructor() {
+  constructor(parent) {
+    this.parent = parent;
     this.factories = {};
   }
   register(name, dependencies, factory) {
@@ -31,8 +32,10 @@ class Container {
     });
   }
   resolve(name) {
-    if(!this.factories[name]) {
+    if(!this.factories[name] && !this.parent) {
       throw new Error('Dependency ' + name + ' not found!');
+    } else if(this.parent) {
+      return this.parent.resolve(name);
     }
     return this.factories[name].instance
       ? this.factories[name].instance
