@@ -29,7 +29,7 @@ class Container {
   resolve(name) {
     if(!this.factories[name] && !this.parent) {
       throw new Error('Dependency ' + name + ' not found!');
-    } else if(this.parent) {
+    } else if(!this.factories[name]) {
       return this.parent.resolve(name);
     }
     return this.factories[name].instance
