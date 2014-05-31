@@ -1,6 +1,6 @@
 {
   "name": "es6-dic",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ES6 Dependency Injection Container",
   "main": "index.js",
   "scripts": {
