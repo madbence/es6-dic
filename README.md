@@ -21,6 +21,11 @@ console.log(c.resolve('a')) // 'ba';
 
 ## API
 
+### new Container([parent])
+
+Creates a new container, with optional `parent`,
+to delegate `resolve`, when an item is missing.
+
 ### .register(name, [dependencies,] factory)
 
 Register `name` with optional `dependencies`.
