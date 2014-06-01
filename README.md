@@ -61,7 +61,7 @@ var c = new Container();
 
 c.register('inject', () => c);
 
-c.register('beep', ['boop'], function(boop) {
+c.register('beep', ['boop'], boop => {
   return function() {
     console.log('beep');
     setTimeout(boop, 1000);
