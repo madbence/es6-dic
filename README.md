@@ -1,6 +1,4 @@
-# es6-dic
-
-ES6 Dependency Injection Container
+# Dependency Injection Container for ES6
 
 ## Install
 
