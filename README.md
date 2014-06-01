@@ -32,6 +32,9 @@ Register `name` with optional `dependencies`.
 `factory` is used to create instance,
 the arguments are the specified dependencies.
 
+If you create a circular dependecy, an `Error`
+is thrown.
+
 Dependency order **is** important.
 
 ### .resolve(name)
