@@ -39,7 +39,7 @@ Dependency order **is** important.
 
 ### .resolve(name)
 
-Get instance for `name`.
+Get instance for `name`. If not found, throws an `Error`.
 
 ## Notes
 
